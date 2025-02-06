@@ -269,6 +269,8 @@ section#image div {
     font-weight: 400;
     text-align: center;
     color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    /* Sombra negra para mayor contraste */
 }
 
 #wedding-info div.container-fluid div.row div.col-md-3 h3 {
@@ -303,19 +305,21 @@ section#image div {
     border: solid 1px #000;
 }
 
-#dress_code div.container div.row div h1 {
+#dress_code div.container-fluid div.row div h1 {
     font-size: 3.5em;
     font-family: 'The_Billion';
     color: #817A68;
+    white-space: nowrap;
 }
 
-#dress_code div.container div.row div h4 {
+#dress_code div.container-fluid div.row div h4 {
     font-family: 'Bodoni Moda SC';
     color: #817A68;
     letter-spacing: 5px;
+    white-space: nowrap;
 }
 
-#dress_code div.container div.row div h4 span {
+#dress_code div.container-fluid div.row div h4 span {
     color: #746e5f;
     font-weight: bolder;
 }
