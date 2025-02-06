@@ -11,20 +11,29 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+    <div id="preloader">
+        <!-- Aquí se puede colocar el SVG de los anillos de boda -->
+        <svg class="ring-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <circle cx="30" cy="50" r="20" fill="none" stroke="#817A68" stroke-width="5" />
+            <circle cx="70" cy="50" r="20" fill="none" stroke="#817A68" stroke-width="5" />
+        </svg>
+    </div>
+
     <header class="header">
         <div class="header-content">
-            <h1>Fernanda y Saul</h1>
+            <h1 data-aos="fade">Fernanda y Saul</h1>
         </div>
     </header>
 
     <section id="info" class="section">
-        <div class="container">
+        <div data-aos="fade" class="container ">
             <h4 class="mb-3">¡NOS CASAMOS!</h4>
             <h2 class="mb-3">20 DE DICIEMBRE 2025</h2>
-            <h6 class="mb-4">TLAQUEPAQUE, JALISCO</h6>
+            <h6 class="mb-4">TLAJOMULCO DE ZUÑIGA, JALISCO</h6>
             <svg preserveAspectRatio="xMidYMid meet" data-bbox="38.501 44.001 122.999 111.997"
                 viewBox="38.501 44.001 122.999 111.997" height="50" width="50" xmlns="http://www.w3.org/2000/svg"
                 data-type="color" role="presentation" aria-hidden="true">
@@ -46,7 +55,7 @@
                         fill="#817A68" data-color="2"></path>
                 </g>
             </svg>
-            <div class="container">
+            <div data-aos="fade" class="container">
                 <div class="row">
                     <div class="col">
                         <p class="mt-4"> Puedo decir que he andado por todos los caminos. <strong>Casi hasta los sabia
@@ -58,13 +67,13 @@
             </div>
 
         </div>
-        <div class="container">
-            <div id="clock" class="clock row align-items-start"></div>
-            <div id="time" class="time row align-items-start">
-                <div class="col-3">Dias</div>
-                <div class="col-3">Horas</div>
-                <div class="col-3">Min.</div>
-                <div class="col-3">Seg.</div>
+        <div data-aos="fade" class="container">
+            <div id="clock" class="clock row align-items-center justify-content-center"></div>
+            <div id="time" class="time row align-items-center justify-content-center">
+                <div class="col-2">Dias</div>
+                <div class="col-2">Horas</div>
+                <div class="col-2">Min.</div>
+                <div class="col-2">Seg.</div>
             </div>
         </div>
     </section>
@@ -75,9 +84,9 @@
     </section>
 
     <section id="schedule">
-        <div class="container">
-            <h1 class="m-5">Minuto a Minuto</h1>
-            <div class="row align-items-center justify-content-center">
+        <div data-aos="fade" class="container">
+            <h1 class="p-5">Minuto a Minuto</h1>
+            <div class="row align-items-center justify-content-md-center justify-content-start">
                 <div class="col-4">
                     <ul class="schedule">
                         <li>
@@ -139,21 +148,21 @@
     <section id="wedding-info">
         <div class="container-fluid wedding-info">
             <div class="centered-text">
-                <h2>¿Cuándo & Dónde?</h2>
+                <h1 data-aos="fade">¿Cuándo & Dónde?</h1>
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row align-items-center justify-content-center p-5">
-                <div class="col-md-3 text-center">
+            <div data-aos="fade" class="row align-items-center justify-content-center p-5">
+                <div class="col-md-3 text-center p-4">
                     <h3 class="pb-4">Ceremonia</h3>
                     <p>Parroquia san pío de pietrelcina, C. José Maria Escriba 118, 45653 Hacienda Santa Fe, Jal.</p>
                     <p>6:00 pm</p>
-                    <a name="" id="" class="btn btn-primary"
+                    <a name="" id="" class="btn btn-primary" target="_blank"
                         href="https://maps.app.goo.gl/SRkN3iKNyyoH28f39?g_st=com.google.maps.preview.copy"
                         role="button">IR A MAPS</a>
 
                 </div>
-                <div class="col-md-2 text-center">
+                <div class="col-md-2 text-center p-4">
                     <svg class="triptych" preserveAspectRatio="xMidYMid meet" data-bbox="61 20 78 159.999"
                         viewBox="61 20 78 159.999" xmlns="http://www.w3.org/2000/svg" data-type="color"
                         role="presentation" aria-hidden="true">
@@ -188,17 +197,28 @@
                         </g>
                     </svg>
                 </div>
-                <div class="col-md-3 text-center">
+                <div class="col-md-3 text-center p-4">
                     <h3 class="pb-4">Recepción</h3>
                     <p>Baru eventos, C. José Maria Morelos 474, Tlaquepaque 45610, Jalisco</p>
                     <p>8:00 pm</p>
-                    <a name="" id="" class="btn btn-primary"
+                    <a name="" id="" class="btn btn-primary" target="_blank"
                         href="https://maps.app.goo.gl/A5pViqt2ghuLNKCY7?g_st=com.google.maps.preview.copy"
                         role="button">IR A MAPS</a>
                 </div>
             </div>
         </div>
 
+    </section>
+
+    <section id="dress_code">
+        <div class="container p-2">
+            <div class="row align-items-center justify-content-center p-5">
+                <div data-aos="fade" class="col-md-9">
+                    <h1 class="p-5">Dress Code</h1>
+                    <h4><span>ETIQUETA</span> RIGUROSA</h4>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -217,7 +237,7 @@
                 <div class="col-md-3 p-3 column-adjustment">
                     <i class="fab fa-instagram" style="font-size: 12em;"></i>
                 </div>
-                <div class="col-md-3 p-3 column-adjustment">
+                <div data-aos="fade" class="col-md-3 p-3 column-adjustment">
                     <h3>Hashtag Oficial</h3>
                     <h1>#FerSaul</h1>
                 </div>
@@ -227,7 +247,7 @@
 
     <section id="gift">
         <div class="container p-5">
-            <div class="row align-items-center justify-content-center">
+            <div data-aos="fade" class="row align-items-center justify-content-center">
                 <h2 class="pt-4 pb-5">Mesa de Regalos</h2>
                 <p>El regalo es opcional, lo más importante para nosotros, es tu compañía</p>
                 <div class="col">
@@ -314,7 +334,7 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="go-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+            <div class="go-top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-chevron-up" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -322,8 +342,8 @@
                 </svg>
                 <span>IR AL INICIO</span>
             </div>
-            <p class="mt-3 text-muted">© 2025 FERNANDA & SAUL | <a href="https://www.mywedday.mx"
-                    target="_blank">www.mywedday.mx</a></p>
+            <p class="mt-3 text-muted"><a href="https://fernanda-saul.vercel.app" target="_blank">© 2025 FERNANDA &
+                    SAUL</a></p>
         </div>
     </footer>
 
@@ -414,6 +434,43 @@
             const scrollAmount = container.clientWidth / 2;
             container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
         }
+    </script>
+    <script>
+        document.querySelector('.go-top').addEventListener('click', function () {
+            const duration = 1500; // Duración del desplazamiento en milisegundos (ajusta a tu gusto)
+            const start = window.scrollY;
+            const end = 0;
+            const startTime = performance.now();
+
+            function animateScroll() {
+                const currentTime = performance.now();
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+
+                window.scrollTo(0, start + (end - start) * progress);
+
+                if (progress < 1) {
+                    requestAnimationFrame(animateScroll);
+                }
+            }
+
+            animateScroll();
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,  // Duración de la animación
+            once: true,      // La animación solo se ejecuta una vez al hacer scroll
+        });
+    </script>
+    <script>
+        // JavaScript para ocultar el preloader una vez que la página ha cargado
+        window.onload = function () {
+            const preloader = document.getElementById('preloader');
+            preloader.style.display = 'none';  // Oculta el preloader
+        };
     </script>
 </body>
 

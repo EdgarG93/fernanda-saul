@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('clock').innerHTML = "<div class='col-3'>" + days + "</div><div class='col-3'>" + hours + "</div><div class='col-3'>" + minutes + "</div><div class='col-3'>" + seconds + "</div>";
+        document.getElementById('clock').innerHTML = "<div class='col-2'>" + days + "</div><div class='col-2'>" + hours + "</div><div class='col-2'>" + minutes + "</div><div class='col-2'>" + seconds + "</div>";
 
         if (distance < 0) {
             clearInterval(x);
