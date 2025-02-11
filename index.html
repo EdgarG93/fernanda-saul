@@ -70,10 +70,10 @@
         <div data-aos="fade" class="container">
             <div id="clock" class="clock row align-items-center justify-content-center"></div>
             <div id="time" class="time row align-items-center justify-content-center">
-                <div class="col-3">Dias</div>
-                <div class="col-3">Horas</div>
-                <div class="col-3">Min.</div>
-                <div class="col-3">Seg.</div>
+                <div class="col-2">Dias</div>
+                <div class="col-2">Horas</div>
+                <div class="col-2">Min.</div>
+                <div class="col-2">Seg.</div>
             </div>
         </div>
     </section>
@@ -210,7 +210,7 @@
 
     </section>
 
-    <section id="dress_code">
+    <section id="dress_code" class="mb-5">
         <div class="container-fluid p-2">
             <div class="row align-items-center justify-content-center pt-5 pb-5">
                 <div data-aos="fade" class="col">
@@ -223,7 +223,7 @@
 
 
     <!-- Sección de la galería -->
-    <section class="gallery-section">
+    <section class="gallery-section mb-2">
         <div class="gallery-wrapper">
             <button class="arrow arrow-left" onclick="scrollGallery(-1)">&#10094;</button>
             <div class="gallery-container" id="gallery-container"></div>
@@ -358,6 +358,60 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script>
+        function removeClass() {
+            if (window.innerWidth <= 600) {
+                //Eliminar clase large
+                document.querySelectorAll('.gallery-item.large').forEach(item => {
+                    item.classList.remove('large');
+                });
+                // Eliminar los contenedores 'gallery-group'
+                document.querySelectorAll('.gallery-group').forEach(group => {
+                    while (group.firstChild) {
+                        // Mueve los elementos hijos del grupo a su contenedor padre
+                        group.parentNode.insertBefore(group.firstChild, group);
+                    }
+                    group.remove(); // Luego elimina el grupo vacío
+                });
+            }
+        }
+
+        // Ejecutar al cargar la página
+        window.addEventListener('DOMContentLoaded', removeClass);
+
+        // Ejecutar cuando la pantalla cambie de tamaño
+        window.addEventListener('resize', removeClass);
+    </script>
+    <script>
+        function adjustGalleryLayout() {
+            const galleryContainer = document.getElementById('gallery-container');
+
+            if (window.innerWidth <= 600) {
+                galleryContainer.classList.add('masonry-layout');
+
+                // Ajustar la altura de los elementos en el layout masonry
+                const galleryItems = galleryContainer.querySelectorAll('.gallery-item');
+                galleryItems.forEach(item => {
+                    const img = item.querySelector('img');
+                    img.addEventListener('load', function () {
+                        const rowHeight = 5;
+                        const rowSpan = Math.ceil((img.naturalHeight / img.naturalWidth) * (item.offsetWidth / rowHeight));
+                        item.style.gridRowEnd = 'span ' + rowSpan;
+                    });
+                });
+            } else {
+                galleryContainer.classList.remove('masonry-layout');
+                // Restablecer estilos para pantallas grandes
+                galleryContainer.querySelectorAll('.gallery-item').forEach(item => {
+                    item.style.gridRowEnd = '';
+                });
+            }
+        }
+
+        window.addEventListener('load', adjustGalleryLayout);
+        window.addEventListener('resize', adjustGalleryLayout);
+
+    </script>
+    <script>
         // Array de imágenes
         const images = [
             "./images/melanie-rosillo-galvan--JNtWQZt_zQ-unsplash.jpg",
@@ -370,6 +424,7 @@
             "./images/melanie-rosillo-galvan-kQuoKbcqIdc-unsplash.jpg",
             "./images/melanie-rosillo-galvan-pt9esQ8gklo-unsplash.jpg",
             "./images/melanie-rosillo-galvan-RSM3b6CIWqQ-unsplash.jpg"
+
         ];
 
         // Generar la galería

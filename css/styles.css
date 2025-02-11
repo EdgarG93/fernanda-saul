@@ -128,13 +128,16 @@ body {
 
 #info,
 #schedule,
-#dress_code {
+#dress_code,
+#gift,
+#contact {
     height: 100%;
     background-image: url('../images/background_info.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
     color: #817A68;
+    overflow: hidden;
 }
 
 #info .container h2 {
@@ -352,8 +355,7 @@ section#image div {
 }
 
 .gallery-wrapper {
-    position: relative;
-    /* Necesario para posicionar las flechas */
+    position: absolute;
     height: 100%;
     width: 100%;
 }
@@ -426,45 +428,91 @@ section#image div {
     right: 10px;
 }
 
-/* Adaptación para pantallas pequeñas */
+/*Estilo masonry*/
+
+.gallery-container.masonry-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 130px;
+    gap: 5px;
+}
+
+.gallery-container.masonry-layout .gallery-item {
+    display: block;
+    position: relative;
+}
+
+.gallery-container.masonry-layout .gallery-item::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.gallery-container.masonry-layout .gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
 @media (max-width: 600px) {
 
-    .gallery-container {
+    .gallery-section {
+        background-color: #f9f9f9;
+        height: 90vh;
         display: flex;
         flex-direction: column;
-        overflow-x: hidden;
-        align-items: center;
+        justify-content: center;
+        margin: 50px 0;
     }
 
-    .gallery-group {
-        display: flex;
-        flex-wrap: wrap;
-        /* Para permitir que las imágenes se acomoden en varias filas */
+    .gallery-wrapper {
+        position: absolute;
+        height: auto;
         width: 100%;
     }
 
+    .gallery-container {
+        column-count: 2;
+        column-gap: 0;
+    }
+
     .gallery-item {
-        width: 50%;
-        /* Dos imágenes por fila */
-        height: auto;
-        overflow: hidden;
-        padding: 0;
-        /* Aseguramos que no haya padding adicional */
+        break-inside: avoid;
+        margin-bottom: 10px;
+        width: 100%;
     }
 
     .gallery-item img {
         width: 100%;
-        /* Asegura que la imagen ocupe todo el espacio disponible */
-        height: 100%;
-        object-fit: cover;
+        height: auto;
+        display: block;
     }
 
     .arrow {
         display: none;
-        /* Ocultar flechas en pantallas pequeñas */
+    }
+
+    .gradiente {
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(45deg, #FF9800, #ff69b4, #800080);
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        /* Para corregir el overlay */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 }
+
+
 
 
 
@@ -525,14 +573,6 @@ section#image div {
 
 .test {
     border: 1px solid #000;
-}
-
-#gift {
-    background-image: url('../images/background_info.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: #817A68;
 }
 
 #gift div.container h2 {
