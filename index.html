@@ -15,20 +15,22 @@
 </head>
 
 <body>
+    <!--Preloader-->
     <div id="preloader">
-        <!-- Aquí se puede colocar el SVG de los anillos de boda -->
         <svg class="ring-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <circle cx="30" cy="50" r="20" fill="none" stroke="#817A68" stroke-width="5" />
             <circle cx="70" cy="50" r="20" fill="none" stroke="#817A68" stroke-width="5" />
         </svg>
     </div>
 
+    <!--Header-->
     <header class="header">
         <div class="header-content">
             <h1 data-aos="fade">Fernanda y Saul</h1>
         </div>
     </header>
 
+    <!--Section info-->
     <section id="info" class="section">
         <div data-aos="fade" class="container ">
             <h4 class="mb-3">¡NOS CASAMOS!</h4>
@@ -83,6 +85,7 @@
         </div>
     </section>
 
+    <!--Section schedule-->
     <section id="schedule">
         <div data-aos="fade" class="container">
             <h1 class="p-5">Minuto a Minuto</h1>
@@ -145,6 +148,7 @@
         </div>
     </section>
 
+    <!--Section info-->
     <section id="wedding-info">
         <div class="container-fluid wedding-info">
             <div class="centered-text">
@@ -154,7 +158,7 @@
         <div class="container-fluid">
             <div data-aos="fade" class="row align-items-center justify-content-center p-5">
                 <div class="col-md-3 text-center p-4">
-                    <h3 class="pb-4">Ceremonia</h3>
+                    <h1 class="pb-4">Ceremonia</h1>
                     <p>Parroquia San Pío de Pietrelcina, C. José Maria Escriba 118, 45653 Hacienda Santa Fe, Jal.</p>
                     <p>6:00 pm</p>
                     <a name="" id="" class="btn btn-primary" target="_blank"
@@ -198,7 +202,7 @@
                     </svg>
                 </div>
                 <div class="col-md-3 text-center p-4">
-                    <h3 class="pb-4">Recepción</h3>
+                    <h1 class="pb-4">Recepción</h1>
                     <p>Baru eventos, C. José Maria Morelos 474, Tlaquepaque 45610, Jalisco</p>
                     <p>8:00 pm</p>
                     <a name="" id="" class="btn btn-primary" target="_blank"
@@ -210,6 +214,7 @@
 
     </section>
 
+    <!--Section dresscode-->
     <section id="dress_code" class="mb-5">
         <div class="container-fluid p-2">
             <div class="row align-items-center justify-content-center pt-5 pb-5">
@@ -222,7 +227,7 @@
     </section>
 
 
-    <!-- Sección de la galería -->
+    <!-- Section gallery -->
     <section class="gallery-section mb-2">
         <div class="gallery-wrapper">
             <button class="arrow arrow-left" onclick="scrollGallery(-1)">&#10094;</button>
@@ -231,6 +236,7 @@
         </div>
     </section>
 
+    <!--Section hashtag-->
     <section id="hashtag">
         <div class="container-fluid gradiente">
             <div data-aos="fade" class="row-edit text-white">
@@ -248,11 +254,11 @@
     <section id="gift">
         <div class="container p-5">
             <div data-aos="fade" class="row align-items-center justify-content-center">
-                <h2 class="pt-4 pb-5">Mesa de Regalos</h2>
+                <h1 class="pt-4 pb-5">Mesa de Regalos</h1>
                 <p>El regalo es opcional, lo más importante para nosotros, es tu compañía</p>
                 <div class="col">
                     <figure class="figure">
-                        <img src="../Web boda/images/amazon.png" class="figure-img img-fluid rounded" alt="" />
+                        <img src="./images/amazon.png" class="figure-img img-fluid rounded" alt="" />
                         <figcaption class="figure-caption text-center">
                             <a name="" id="" class="btn btn-primary" href="#" role="button">IR AL SITIO</a>
                         </figcaption>
@@ -290,7 +296,7 @@
                 </div>
                 <div class="col">
                     <figure class="figure">
-                        <img src="../Web boda/images/liverpool.png" class="figure-img img-fluid rounded" alt="" />
+                        <img src="./images/liverpool.png" class="figure-img img-fluid rounded" alt="" />
                         <figcaption class="figure-caption text-center">
                             <a name="" id="" class="btn btn-primary" href="#" role="button">IR AL SITIO</a>
                         </figcaption>
@@ -300,6 +306,7 @@
         </div>
     </section>
 
+    <!--Section contact-->
     <section id="contact">
         <div class="container-fluid">
             <div class="row align-items-center justify-content-center">
@@ -332,6 +339,7 @@
         </div>
     </section>
 
+    <!--Section footer-->
     <footer class="footer">
         <div class="container">
             <div class="go-top">
@@ -347,8 +355,8 @@
         </div>
     </footer>
 
-
-    <script src="js/script.js"></script>
+    <!--Scripts-->
+    <script src="js/clock.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-eMN0ZtZn8MgPyh4ggnykCgKTxRKTm/q7Rg2Q0G7BrG2jnZTgkaA8PHOTTXkLyNUx"
         crossorigin="anonymous"></script>
@@ -357,176 +365,12 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script>
-        function removeClass() {
-            if (window.innerWidth <= 600) {
-                //Eliminar clase large
-                document.querySelectorAll('.gallery-item.large').forEach(item => {
-                    item.classList.remove('large');
-                });
-                // Eliminar los contenedores 'gallery-group'
-                document.querySelectorAll('.gallery-group').forEach(group => {
-                    while (group.firstChild) {
-                        // Mueve los elementos hijos del grupo a su contenedor padre
-                        group.parentNode.insertBefore(group.firstChild, group);
-                    }
-                    group.remove(); // Luego elimina el grupo vacío
-                });
-            }
-        }
-
-        // Ejecutar al cargar la página
-        window.addEventListener('DOMContentLoaded', removeClass);
-
-        // Ejecutar cuando la pantalla cambie de tamaño
-        window.addEventListener('resize', removeClass);
-    </script>
-    <script>
-        function adjustGalleryLayout() {
-            const galleryContainer = document.getElementById('gallery-container');
-
-            if (window.innerWidth <= 600) {
-                galleryContainer.classList.add('masonry-layout');
-
-                // Ajustar la altura de los elementos en el layout masonry
-                const galleryItems = galleryContainer.querySelectorAll('.gallery-item');
-                galleryItems.forEach(item => {
-                    const img = item.querySelector('img');
-                    img.addEventListener('load', function () {
-                        const rowHeight = 5;
-                        const rowSpan = Math.ceil((img.naturalHeight / img.naturalWidth) * (item.offsetWidth / rowHeight));
-                        item.style.gridRowEnd = 'span ' + rowSpan;
-                    });
-                });
-            } else {
-                galleryContainer.classList.remove('masonry-layout');
-                // Restablecer estilos para pantallas grandes
-                galleryContainer.querySelectorAll('.gallery-item').forEach(item => {
-                    item.style.gridRowEnd = '';
-                });
-            }
-        }
-
-        window.addEventListener('load', adjustGalleryLayout);
-        window.addEventListener('resize', adjustGalleryLayout);
-
-    </script>
-    <script>
-        // Array de imágenes
-        const images = [
-            "./images/melanie-rosillo-galvan--JNtWQZt_zQ-unsplash.jpg",
-            "./images/melanie-rosillo-galvan-K32SzMSVPyM-unsplash.jpg",
-            "./images/melanie-rosillo-galvan-kQuoKbcqIdc-unsplash.jpg",
-            "./images/melanie-rosillo-galvan-pt9esQ8gklo-unsplash.jpg",
-            "./images/melanie-rosillo-galvan-RSM3b6CIWqQ-unsplash.jpg",
-            "./images/melanie-rosillo-galvan--JNtWQZt_zQ-unsplash.jpg",
-            "./images/melanie-rosillo-galvan-K32SzMSVPyM-unsplash.jpg",
-            "./images/melanie-rosillo-galvan-kQuoKbcqIdc-unsplash.jpg",
-            "./images/melanie-rosillo-galvan-pt9esQ8gklo-unsplash.jpg",
-            "./images/melanie-rosillo-galvan-RSM3b6CIWqQ-unsplash.jpg"
-
-        ];
-
-        // Generar la galería
-        const galleryContainer = document.getElementById("gallery-container");
-
-        for (let i = 0; i < images.length; i += 5) {
-            const group = document.createElement("div");
-            group.className = "gallery-group";
-
-            // Primera columna (1 imagen grande)
-            if (images[i]) {
-                const largeItem = document.createElement("a");
-                largeItem.href = images[i];
-                largeItem.className = "gallery-item large";
-                largeItem.innerHTML = `<img src="${images[i]}" alt="Imagen de galería">`;
-                group.appendChild(largeItem);
-            }
-
-            // Segunda columna (2 imágenes)
-            for (let j = 1; j <= 2; j++) {
-                if (images[i + j]) {
-                    const item = document.createElement("a");
-                    item.href = images[i + j];
-                    item.className = "gallery-item";
-                    item.innerHTML = `<img src="${images[i + j]}" alt="Imagen de galería">`;
-                    group.appendChild(item);
-                }
-            }
-
-            // Tercera columna (2 imágenes)
-            for (let j = 3; j <= 4; j++) {
-                if (images[i + j]) {
-                    const item = document.createElement("a");
-                    item.href = images[i + j];
-                    item.className = "gallery-item";
-                    item.innerHTML = `<img src="${images[i + j]}" alt="Imagen de galería">`;
-                    group.appendChild(item);
-                }
-            }
-
-            galleryContainer.appendChild(group);
-        }
-
-        // Activar Magnific Popup
-        $(document).ready(function () {
-            $(".gallery-item").magnificPopup({
-                type: "image",
-                closeOnContentClick: true,
-                mainClass: "mfp-with-zoom mfp-img-mobile",
-                image: {
-                    verticalFit: true,
-                },
-                gallery: {
-                    enabled: true,
-                },
-            });
-        });
-
-        // Función para desplazar la galería
-        function scrollGallery(direction) {
-            const container = document.getElementById("gallery-container");
-            const scrollAmount = container.clientWidth / 2;
-            container.scrollBy({ left: direction * scrollAmount, behavior: "smooth" });
-        }
-    </script>
-    <script>
-        document.querySelector('.go-top').addEventListener('click', function () {
-            const duration = 1500; // Duración del desplazamiento en milisegundos (ajusta a tu gusto)
-            const start = window.scrollY;
-            const end = 0;
-            const startTime = performance.now();
-
-            function animateScroll() {
-                const currentTime = performance.now();
-                const timeElapsed = currentTime - startTime;
-                const progress = Math.min(timeElapsed / duration, 1);
-
-                window.scrollTo(0, start + (end - start) * progress);
-
-                if (progress < 1) {
-                    requestAnimationFrame(animateScroll);
-                }
-            }
-
-            animateScroll();
-        });
-
-    </script>
+    <script src="js/gallery/adjustGalleryLayout.js"></script>
+    <script src="js/gallery/removeClass.js"></script>
+    <script src="js/gallery/gallery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,  // Duración de la animación
-            once: true,      // La animación solo se ejecuta una vez al hacer scroll
-        });
-    </script>
-    <script>
-        // JavaScript para ocultar el preloader una vez que la página ha cargado
-        window.onload = function () {
-            const preloader = document.getElementById('preloader');
-            preloader.style.display = 'none';  // Oculta el preloader
-        };
-    </script>
+    <script src="js/scroll.js"></script>
+    <script src="js/preloader.js"></script>
 </body>
 
 </html>

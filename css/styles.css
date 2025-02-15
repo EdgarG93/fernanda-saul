@@ -269,6 +269,7 @@ section#image div {
 
 .wedding-info .centered-text h1 {
     font-family: 'Bodoni Moda SC';
+    font-size: 1.5em;
     font-weight: 400;
     text-align: center;
     color: #fff;
@@ -276,7 +277,7 @@ section#image div {
     /* Sombra negra para mayor contraste */
 }
 
-#wedding-info div.container-fluid div.row div.col-md-3 h3 {
+#wedding-info div.container-fluid div.row div.col-md-3 h1 {
     font-family: 'Amsterdam Four', sans-serif;
     font-weight: 100;
     text-align: center;
@@ -575,7 +576,7 @@ section#image div {
     border: 1px solid #000;
 }
 
-#gift div.container h2 {
+#gift div.container h1 {
     font-family: 'Amsterdam Four', sans-serif;
     font-weight: 100;
     text-align: center;
